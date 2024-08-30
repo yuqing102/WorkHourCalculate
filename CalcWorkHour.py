@@ -59,7 +59,7 @@ def excel():
     # 补齐数据
     for i in range(3, rows + 1):
         if sheet.range((i, 3)).value is None:
-            if sheet.range((i, 3)).value is not None and sheet.range((i, 7)).value != '':
+            if sheet.range((i, 8)).value is not None and sheet.range((i, 9)).value is not None:
                 sheet.range((i, 3)).value = sheet.range((i - 1, 3)).value
                 sheet.range((i, 7)).value = sheet.range((i - 1, 7)).value
             else:
